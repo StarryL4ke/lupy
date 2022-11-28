@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>실행 순서</title>
+<script type="text/javascript">
+	/* javascript에서 다중행 주석 처리 방법,
+	단일 행 주석은 // 이용해서 처리한다.
+	
+	자바스크립트에서 변수 만드는법 
+	
+		var 변수이름; => 앞으로 이 변수를 쓰겠다 선언.
+		변수이름 = 데이타; => 변수의 초기화*/
+		
+	var num = 0; //num 변수를 만들고 0으로 채운다. ==> number type 결정 됨.
+	num = 'zero';
+	document.write('head 태그 내 실행 순서: ' + num + '<br>');
+	/* + : 이 경우는 하나의 문자열을 만드는 결합연산자
+	=> ' head 태그 내 실행 순서 : ' + 'zero' +'<br>'
+		=> head 태그 내 실행 순서 : zero<br>
+		 경합 순서는 왼쪽에서 오른쪽으로 진행*/
+</script>
+<script type="text/javascript">
+	var num = 1;
+	document.write('head 태그 내 실행 순서: ' + num + '<br>');
+	/* + : 이 경우는 하나의 문자열을 만드는 결합연산자
+	=> ' head 태그 내 실행 순서 : ' + '1' +'<br>'
+	
+	문자열과 순자의 결합은 항상 문자열이 만들어진다.
+		=> head 태그 내 실행 순서 : zero<br>
+		 경합 순서는 왼쪽에서 오른쪽으로 진행*/
+</script>
+</head>
+<body>
+<script type="text/javascript">
+	var num = 2;
+	document.write('head 태그 내 실행 순서: ' + num + '<br>');
+</script>
+<script type="text/javascript">
+	var num =3;
+	document.write('head 태그 내 실행 순서: ' + num + '<br>');
+</script>
+</body>
+</html>
