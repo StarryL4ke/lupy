@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	
+/* 
+	1년은 365.2426 일 이다.
+	이것은 몇일 몇시간 몇분 몇초로 이루어져있는지를 계산해서 출력하세요.
+	
+	참고] 
+		0.1 일은
+		0.1 * 24 시간 
+		0.1 * 24 * 60분
+		0.1 * 24 * 60 * 60초
+		
+		1일 = 86400초
+		1시간 = 3600초
+		1분 = 60초
+		1초 = 1초
+*/
+
+/* var total= 365.2426;
+var calc = total;
+
+var tier1 = parseInt(calc / 1);
+	calc = calc % 1;//0.2426
+	document.write('일 :' + tier1 + '<br>');
+
+var tier2 = parseInt(calc * 86400 / 3600);
+	calc = calc % 86400 / 3600;//2960.64
+	document.write('시간 :' + tier2 + '<br>');
+	
+var tier3 = parseInt(calc * 86400 / 60);
+	calc = calc % 86400 / 60;
+	document.write('분 :' + tier3 + '<br>');
+	
+	 */
+	
+	
+var total = 31556960.6; //초
+var calc = total;
+
+	var day = parseInt(calc / 86400);
+		calc = calc % 86400;
+	
+	var hour = parseInt(calc / 3600);
+		calc = calc % 3600;
+		
+	var minute = parseInt(calc / 60);
+		calc = calc % 60;
+	
+	var second = parseInt(calc / 1);
+		calc = calc % 1;
+		
+		
+		document.write(day + ' 일 <br>');
+		document.write(hour + ' 시간 <br>');
+		document.write(minute + ' 분 <br>');
+		document.write(second + ' 초 <br>');
+
+	
+	
+	
+
+</script>
+</body>
+</html>

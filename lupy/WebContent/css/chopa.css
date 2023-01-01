@@ -1,0 +1,99 @@
+.mxw500 {
+	max-width: 500px;
+}
+.mxw550 {
+	max-width: 550px;
+}
+.mxw600 {
+	max-width: 600px;
+}
+.mxw650 {
+	max-width: 650px;
+}
+.mxw700 {
+	max-width: 700px;
+}
+.mxw750 {
+	max-width: 750px;
+}
+.mxw800 {
+	max-width: 800px;
+}
+
+.inblock {
+	display: inline-block;
+}
+
+/* margin */
+.mgb10 {
+	margin-bottom: 10px;
+}
+.mgt10 {
+	margin-top: 10px;
+}
+.mgl10 {
+	margin-left: 10px;
+}
+.mgr10 {
+	margin-right: 10px;
+}
+
+/* padding */
+.pd5 {
+	padding: 5px;
+}
+.pdt10 {
+	padding-top: 10px;
+}
+.pdr10 {
+	padding-right: 10px;
+}
+.pdb10 {
+	padding-bottom: 10px;
+}
+.pdl10 {
+	padding-left: 10px;
+}
+.pdv20 {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.mgb20 {
+	margin-bottom: 20px;
+}
+.mgt20 {
+	margin-top: 20px;
+}
+.mgt200 {
+	margin-top: 200px;
+}
+.w160 {
+	width: 160px;
+}
+.label1 {
+	font-size: 14pt;
+	font-weight: bold;
+	line-height: 230%
+}
+.box100 {
+		width: 100px;
+		height: 100px;
+}
+.img1 {
+	width: 95px;
+	height: 95px;
+}
+.imgbox {
+	width: 95px;
+	height: 95px;
+	overflow: hidden;
+}
+.ckbt {
+	width: 93px;
+	height: 40px;
+	margin-left: 10px;
+	line-height: 150%;
+}
+.textright {
+	text-align: right;	
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	num1 = parseInt(prompt('1st No. '))
+	num2 = parseInt(prompt('2nd No. '))
+//	num3 = parseInt(prompt('3rd No. '))
+	
+/*  example 01)
+
+	function getSum(no1, no2, no3){
+		var sum = no1 + no2 + no3;
+		return sum;
+	}
+	
+	
+	var sum = getSum(num1, num2, num3);
+	
+	
+	document.write('1st No. [' + num1 + ']<br>2nd No. [' + num2 + ']<br>3nd No. [' + num3 + ']<br>Sum . [' + sum + ']');
+*/
+
+//	example02)
+
+/* 
+	function getSum(no1, no2){
+		var sum = 0;
+		var min, max;
+		if(no1 > no2){
+			max = no1
+			min = no2
+		}else{
+			max = no2
+			min = no1
+		}
+		for(i = min; i < max + 1 ; i++ ){
+			sum = sum + i
+		}
+		return sum;
+	}
+	
+	var result = getSum(num1,num2);
+	
+	document.write('1st No. [' + num1 + ']<br>2nd No. [' + num2 + ']<br>1st+...+2nd Sum. [' + result+ ']');
+*/
+
+
+	function getSub(no1, no2){
+		var sub = no1 - no2
+		return sub;
+	}
+	
+	var sub = getSub(num1, num2);
+	
+	document.write('1st No. [' + num1 + ']<br>2nd No. [' + num2 + ']<br>Sub . [' + sub + ']');
+</script>
+</body>
+</html>
+
+
+

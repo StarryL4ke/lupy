@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../css/chopa.css">
+<style type="text/css">
+	#fr {
+	display: none;
+	}
+</style>
+</head>
+<body>
+ 	<div class="w3-content mxw600">
+		<h1 class="w3-center w3-padding w3-magin-top w3-purple w3-card-4">파라메터 해독</h1>
+		
+		<div class="w3-col w3-margin-top w3-card-4">
+			<div class="w3-half w3-green w3-button" id="ebtn">ex01</div>
+			<div class="w3-half w3-blue w3-button" id="pbtn">파라메터 출력</div>
+		</div>
+		
+		<div class="w3-col w3-margin-top w3-padding w3-card-4" id="fr">
+			<div class="w3-col w3-margin-top">
+				<h3 class="w3-col m3 w3-right-align w3-text-grey">I D : </h3>
+				<h3 class="w3-col m7 w3-center w3-text-grey" id="pid"></h3>
+			</div>
+			<div class="w3-col w3-margin-top w3-margin-bottom">
+				<h3 class="w3-col m3 w3-right-align w3-text-grey">P W : </h3> 
+				<h3 class="w3-col m7 w3-center w3-text-grey" id="ppw"></h3>
+			</div>
+		</div>
+	</div>
+<script type="text/javascript" src="../js/jquery-3.6.1.min.js"></script>
+<script type="text/javascript" src="../js/jq01/result.js"></script>
+<script type="text/javascript">
+ 
+	var param = location.search;
+	param = param.substring(1);
+	
+	var paramData = {};
+	
+	var arr = param.split('&');
+	
+	var keys = [];
+	for(var i = 0 ; i < arr.length ; i++){
+	var str = arr[i];
+	var idx = str.indexOf('=');	
+	var key = str.substring(0, idx);
+	var value = str.substring(idx + 1);	
+	keys.push(key);
+	paramData[key] = value;
+	}
+	alert(paramData[keys[0]]);
+	//for(var i = 0 ; i < keys.length ; i++){
+	//	document.write('<h3 class="w3-center">' + keys[i] + ' | ' + paramData[keys[i]] + '</h3>');
+	//}
+
+</script>
+</body>
+</html>

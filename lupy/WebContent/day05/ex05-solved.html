@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../css/chopa.css">
+<style type="text/css">
+
+</style>
+</head>
+<body>
+
+<script type="text/javascript">
+/* 
+	2x + 4y = 20 의 결과를 만족하는 수를 찾으시오 단 10이하
+*/
+
+	var x = 0;
+	for( ; x < 11 ; x++ ){
+		var y = 0;
+		for( ; y < 11 ; y++ ){
+			if((2 * x) + (4 * y) == 20){
+				document.write('x값은 : ' + x + '<br>y값은 : ' + y + '<br><br>');			
+				break;
+			}
+		}
+	}
+
+</script>
+</body>
+</html>

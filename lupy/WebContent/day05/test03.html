@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../css/chopa.css">
+<style type="text/css">
+
+</style>
+</head>
+<body>
+
+<script type="text/javascript">
+/*
+	ex01 ]
+		1 ~ n 까지의 곱을 구해서 반환해주는 함수 fact01 을 만들고
+		숫자를 입력해서 실행한 결과를 출력하세요.
+		
+		참고 ] 
+			factorial : n * (n-1) * ... * 1
+		
+*/
+/* 	var fact01 = function(no){
+		if(no == 1){
+			return 1;
+		}
+		return no * fact01(no -1);
+	}; */
+//
+	function fact02(no){
+	
+		var result = 1;
+	
+		for(var i = 1 ; i < no + 1 ; i++ ){
+		//	result = result * i;
+			result *= i;
+		}
+		return result;
+	}
+	var result = fact02(num);
+
+	
+
+		
+	var num = parseInt(prompt('숫자 입력 : '));
+	var result = fact02(num);
+	document.write(result);
+</script>
+</body>
+</html>

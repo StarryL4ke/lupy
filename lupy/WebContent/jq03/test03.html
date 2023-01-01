@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../css/chopa.css">
+<style type="text/css">
+
+</style>
+</head>
+<body>
+	<div class="w3-content mxw650 w3-center" id="cont">
+		<h1 class="w3-pink w3-padding w3-card-4">태그 추가</h1>
+		<div class="w3-col w3-margin-top" id="fr"></div>
+	</div>
+<script type="text/javascript" src="../js/jquery-3.6.1.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		var no = 1;
+		$('#cont').click(function(){
+			$('#fr').append('<div class="inblock w160 w3-button mgl10 w3-blue w3-border" id="div' +no++ +'">btn</div>')
+		});
+		$('#fr').on('click', '.w160', function(){
+			var sid = $(this).attr('id');
+		});
+	});
+</script>
+</body>
+</html>

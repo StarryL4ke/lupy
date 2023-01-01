@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../css/chopa.css">
+<style type="text/css">
+
+</style>
+</head>
+<body>
+	<div class="w3-content mxw650 w3-center">
+		<h1 class="w3-blue w3-padding w3-card-4">랜덤한 정수( - 10 ~ 10)</h1>
+		<div class="w3-red w3-padding w3-card-4" id="content"></div>
+	</div>
+<script type="text/javascript">
+/* 
+	랜덤한 숫자 발생시키기
+	
+	Math.random() : 반환값이 0 부터 1 사이의 숫자를 반환해주는데 1을 반환해주지 않는다. 0은 반환함
+	
+	원하는 범위의 정수를 발생시키는 공식 ] 
+	
+	parseInt(Math.random() * (max - min + 1) + min)
+	
+	예 ] 10에서 90까지의 랜덤한 정수
+	=>	parseInt(Math.random() * 81 + 10);
+	
+	
+*/
+//	e.g., -10에서 10사이의 랜덤한 정수
+	var str = "| ";
+	for(var i = 0 ; i < 10 ; i++ ){
+		var no = parseInt(Math.random() * 20 + 1 -10);
+		
+		str = str + no + " | ";
+		
+	}
+	document.getElementById('content').innerHTML = str;
+</script>
+</body>
+</html>

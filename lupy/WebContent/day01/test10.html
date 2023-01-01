@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	//전역변수
+	var num= 44;
+	
+	function func01(){//{}: 함수 블럭, 함수가 실행해야할 코드가 작성되는 부분 
+		var locVar; //지역변수 - 함수 내에서 만들어지는 var 키워드가 붙은 변수 - 함수 내에서만 사용가능
+		globVar = 999; //전역변수 - 함수 내에서 만들어지는 var 키워드가 안 붙는 변수 - 
+		locVar = 10;
+	}
+	
+	/* 함수는 스스로 저절로 호출되지 않는다. 반드시 어디선가 호출해줘야 실행된다. */
+	
+/* 	alert(globVar);/* 함수 호출이 안됨., */
+	
+	
+	
+	func01(); // func01() 호출...: 함수의 ({}) 내용을 실행하세요.
+	alert('globVar : ' + globVar);
+	alert('loc : ' + locVar);// 접금 금지 변수, local 변수
+</script>
+</head>
+<body>
+
+<script type="text/javascript">
+	alert('num: ' + num);
+</script>
+</body>
+</html>

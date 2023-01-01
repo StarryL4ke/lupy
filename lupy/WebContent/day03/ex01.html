@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	var year = parseInt(prompt('yyyy년을 입력하시오'));
+	
+	//숫자 A 가 숫자 B로 나누어 떨어진다는 프로그래밍적 표현은 A % B == 0.
+	// e.g., 300 % 3 == 0
+	
+	var result ="평년";
+	
+	
+	if(year % 400 == 0){//400 으로 나누어 떨어지면
+/* 	if(year % 4 == 0){ */ //이 구분은 else if를 실행하지 못함
+		result = '윤년';
+	} else if(year % 100 == 0){
+		result = '평년';
+	} else if(year % 4 == 0 ){
+		result = '윤년';
+	} else {
+		result = '평년';
+	}
+	
+	document.write(result)
+</script>
+</body>
+</html>

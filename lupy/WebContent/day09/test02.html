@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../css/chopa.css">
+<style type="text/css">
+
+</style>
+</head>
+<body>
+	<div class="w3-content mxw600 w3-center">
+		<a href="test02.html?a=1&b=2#top">Link</a>
+		<div class="w3-col w3-margin-top w3-center" id="btnfr">
+			<div class="w3-half w3-blue w3-hover-aqua w3-button" id="gbtn" onclick="func01(this)">google</div>
+			<div class="w3-half w3-green w3-hover-red w3-button" id="wbtn" onclick="func01(this)">w3schools</div>
+			<span id=nth></span>
+		</div>
+	</div>
+	
+<script type="text/javascript">
+/* 	document.write('<p>문서의 URL주소 : ' + location.href + '</p>');
+	document.write('<p>호스트 이름과 포트 : ' + location.host + '</p>');
+	document.write('<p>호스트 컴퓨터 이름: ' + location.hostname + '</p>');
+	document.write('<p>앵커 이름 : ' + location.hash + '</p>');
+	document.write('<p>디렉토리 이하 경로 : ' + location.pathname + '</p>');
+	document.write('<p>포트 경로 : ' + location.port + '</p>');
+	document.write('<p>프로토콜 종류 : ' + location.protocol + '</p>');
+	document.write('<p>파라미터 : ' + location.search + '</p>'); */
+	/* document.getElementById('gbtn').onclick = function(){
+		location.href = 'https://www.google.com';
+	};
+	document.getElementById('wbtn').onclick = function(){
+		location.href = 'https://www.w3schools.com';
+	}; */
+	
+	function func01(el){
+		var txt = el.getAttribute('id');
+		var url = '';
+		switch(txt){
+			case 'gbtn':
+				url = 'https://www.google.com';
+				break;
+			case 'wbtn':
+				url = 'https://www.w3schools.com';
+				break;
+		}
+		location.href = url;
+	}
+	
+	var param = location.search;
+	param = param.substring(1);
+	
+//	alert(param);
+	//a=1&b=1
+	
+	var paramData = {};
+	
+	var arr = param.split('&');
+	
+	var keys = [];
+	for(var i = 0 ; i < arr.length ; i++){
+		var str = arr[i]
+		var idx = str.indexOf('=');
+		var key = str.substring(0, idx);
+		var value = str.substring(idx + 1);
+		keys.push(key);
+		paramData[key] = value;
+	}
+	for(var i = 0 ; i < keys.length ; i++){
+		document.getElementById('nth').innerHTML ='<h4 class="w3-col w3-center w3-red">' + keys[i] + ' | ' + paramData[keys[i]] + '</h4>'
+	
+	}
+	
+	var el = document.getElementById('btnfr').children;
+	alert(el.length);
+</script>
+</body>
+</html>

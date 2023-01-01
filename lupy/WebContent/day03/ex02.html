@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script type="text/javascript">
+/* 	var total = prompt('세자리 숫자를 입력하세요')
+	
+	var calc = total
+	
+	var tier1 = calc / 100
+	
+	document.write(parseInt(tier1) * 100)
+	
+	 */
+	
+	var num = parseInt(prompt('세자리 숫자를 입력하세요'))
+	/* 
+		100으로 나눈 나머지 가 
+		50 이상인 경우는 십의 자리에서 반올림한 숫자
+		50 미만인 경우는 십의 자리에서 버림한 숫자가 된다.
+		
+		100으로 나눈 나머지에 따라서 처리가 된다.
+	*/
+	
+	var rest = num % 100
+	var result = 0;
+	if(rest >= 50){
+		result = (parseInt(num / 100) + 1) * 100 ;
+	}else{// 50 미만인 경우 
+		result = parseInt(num /100) * 100; 
+	}
+	
+	document.write('<h1>입력 받은 세자리 정수' + num + '에 가까운 100단위 숫자는' + result + '</h1>')
+</script>
+</body>
+</html>

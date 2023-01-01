@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../css/chopa.css">
+<style type="text/css">
+
+</style>
+</head>
+<body>
+
+<script type="text/javascript">
+	// 원피스 멤버 5명을 기억할 배열을 만들고 멤버를 채우세요.
+	var onepiece = ['chopa', 'lupy', 'nami', 'sanji', 'jolo'];
+/* 
+	배열 만드는 형식
+	var 변수이름 = [데이터1, 데이터2, 데이터3, 데이터4,...데이터n]
+*/
+//	alert(typeof onepiece);// = Object
+	var adata = ['chopa', 25, '드럼왕국', '의사', 90.0, false];
+	
+/* 
+	[배열 사용 방법]
+	
+	배열에 기억된 데이터는 위치값을 이용해서 꺼내고 채울 수 있다.
+			
+	배열변수[위치값];
+	
+	예]
+	- 꺼내는 작업
+	var name = adata[0];
+	- 수정작업
+	adata[4] = 90.1;
+*/	
+
+	alert('adata name : ' + adata[0]);
+	adata[4] = 90.1;
+	alert('chopa height : ' + adata[4]);
+</script>
+</body>
+</html>

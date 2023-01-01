@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../css/chopa.css">
+<style type="text/css">
+
+</style>
+</head>
+<body>
+	<div class="w3-content mxw500 w3-center">
+		<h1 class="w3-indigo w3-padding w3-card-4" ondblclick="this.style.backgroundColor='red'" onmouseover="this.style.backgroundColor='green'">JavaScript Event</h1>
+		<div class="w3-col w3-card-4 w3-margin-top w3-padding">
+			<div>
+				<div class="w3-col m3 pdr10">
+					<label for="id">아이디</label>
+				</div>
+				<div class="w3-col m7 pd110">
+					<input type="text" name="id" id="id" class="w3-input w3-border" onChange="alert('변경')"
+					onfocus="this.style.backgroundColor='red'" onblur="this.style.backgroundColor='white'"onkeyup="document.getElementById('txt').innerHTML = this.value">			
+				</div>
+			</div>			
+		</div>
+		<div class="inblock w160 w3-button w3-blue w3-margin-top" onclick="alert('눌렀다')">
+			Click
+		<!-- 	onclick="alert('눌렀다')" -->
+		</div>
+	</div>
+	<div class="w3-col w3-card-4" id="txt">
+	</div>
+<script type="text/javascript">
+	document.getElementById('id').onfocus = function(){
+		this.style.backgroundColor = 'green';
+	}
+</script>
+</body>
+</html>

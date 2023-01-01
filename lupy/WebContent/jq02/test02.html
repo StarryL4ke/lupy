@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../css/chopa.css">
+<style type="text/css">
+
+</style>
+</head>
+<body>
+	<div class="w3-content mxw600" id="content">
+		<div class="w3-col w3-margin-top w3-padding w3-card-4" id="fr1">
+			<div class="w3-col w3-border" id="d1">div</div>
+		</div>
+	</div>
+<script type="text/javascript" src="../js/jquery-3.6.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+//	1.	before()
+		$('#fr1').before('<h1 class="w3-pink w3-padding w3-center w3-card-4">태그 편집</h1>');
+//	2.	after()
+		$('#d1').after('<div class="w3-col w3-border mgt10" id="d2">div2</div>');
+//	3.	insert 'w3-center' class into #fr1
+		$('#fr1').addClass('w3-center');
+//	4.	insert '<hr>' underneath '#content'
+//		$('#content').append('<hr>');
+		var tmpTag = document.createElement('hr');
+		$(tmpTag).addClass('w3-col w3-margin-top');
+		$('#content').append(tmpTag);
+//	5.	insert 'div' into 'fr1' at the last place
+//		$('<div class="w3-col w3-border mgt10" id="d3">div3</div>').appendTo('#fr1');
+		$('#fr1').append('<div class="w3-col w3-border mgt10" id="d3">div3</div>');
+//	6.	insert 'h3' into 'fr1' at the first place
+		$('#fr1').prepend('<h3 class="w3-blue">fr1 tag</h3>');
+//		$('<h3 class="w3-blue">fr1 tag</h3>').prependTo('#fr1');
+		
+//	!	$('#d1').insertBefore('<h5 class="green">insert Before</h5>');
+		var el = $('#fr1').clone(false);
+		el.attr('id', 'fr2');
+		$('#content').append(el);
+		
+//		alert($('#fr2').html());
+		
+	
+//		$('h3:contains("fr1 tag")').eq(1).toggleClass('w3-blue w3-green');
+		$('#fr2').find('h3').replaceWith('<h6 class="w3-orange">fr2 태그 </h5>');
+//		$('#fr2').html('');
+//		$('#fr2').empty();
+
+//		$('#fr2').remove();
+		
+		
+//		$('#fr2 > *:not("h6")').wrapAll('<div>');
+		
+		
+		var tag1 = $('#fr2').clone();
+		tag1.attr('id', 'fr3');
+		tag1.find('h6').html('fr3 tag');
+		$('#content').append(tag1);
+		
+		$('#fr3 > div').wrapAll('<div>');	
+		$('#fr3 > div > div').wrapInner('<small>');
+		$('#fr3 > div').has('small').wrapInner('<strong>');
+	});
+</script>
+</body>
+</html>

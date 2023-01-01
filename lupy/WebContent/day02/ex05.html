@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+/* 
+	실수(소숫점이 있는 숫자)를 입력 받아서 
+	소수점 이하 셋째자리에서 반올림한 숫자를 출력하세요.\
+	연산자만 사용해서 처리하세요.
+	parseInt()
+	
+	소수 첫째자리에서 반올림
+	
+	var no = 3.14;
+	
+	no = parseInt(no + 0.5);
+*/
+
+	var num = prompt('소숫점이 있는 숫자를 입력하세요.')
+/* var	inum = parseInt(num);
+ */
+	var inum = parseFloat(num);
+	var tmp = inum;
+	tmp = tmp + 0.005;
+	tmp = tmp * 100;
+	tmp = parseInt(tmp);
+	tmp = tmp / 100;
+	
+	
+	alert(inum + '|' + tmp)
+</script>
+</body>
+</html>

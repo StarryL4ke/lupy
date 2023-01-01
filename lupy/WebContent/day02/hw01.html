@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script type="text/javascript">
+/* 
+	정수 세개를 입력받아서
+	
+	1. 제일 큰 수를 출력하세요.
+	
+	2. 제일 큰 수, 제일 작은 수, 가운데 수를 출력하세요.
+*/
+
+var numA = prompt('A - 숫자를 입력하세요')
+var numB = prompt('B - 숫자를 입력하세요')
+var numC = prompt('C - 숫자를 입력하세요')
+
+var inumA = parseInt(numA)
+var inumB = parseInt(numB)
+var inumC = parseInt(numC)
+
+
+
+if(inumC < inumA&inumA > inumB){
+	if(inumB > inumC){
+		document.write('[A] ' + inumA + '   제일 큰 수<br>' + '[B] ' + inumB + '   가운데 수<br>' + '[C] ' + inumC + '   제일 작은 수');
+	}
+	else if(inumC > inumB){
+		document.write('[A] ' + inumA + '   제일 큰 수<br>' + '[C] ' + inumC + '   가운데 수<br>' + '[B] ' + inumB + '   제일 작은 수');
+	}
+}
+
+if(inumC < inumB&inumB > inumA){
+	if(inumA > inumC){
+		document.write('[B] ' + inumB + '   제일 큰 수<br>' + '[A] ' + inumA + '   가운데 수<br>' + '[C] ' + inumC + '   제일 작은 수');
+	}
+	else if(inumC > inumA){
+		document.write('[B] ' + inumB + '   제일 큰 수<br>' + '[C] ' + inumC + '   가운데 수<br>' + '[A] ' + inumA + '   제일 작은 수');
+	}
+}
+
+if(inumA < inumC&inumC > inumB){
+	if(inumA > inumB){
+		document.write('[C] ' + inumC + '   제일 큰 수<br>' + '[A] ' + inumA + '   가운데 수<br>' + '[B] ' + inumB + '   제일 작은 수');
+	}
+	else if(inumB > inumA){
+		document.write('[C] ' + inumC + '   제일 큰 수<br>' + '[B] ' + inumB + '   가운데 수<br>' + '[A] ' + inumA + '   제일 작은 수');
+	}
+}
+
+
+
+var max, med, min;
+if(inumA > inumB){
+	if(inumA > inumC){
+		max = inumA;
+	}
+		if(inumB > inumC){
+			med = inumB;
+			min = inumC;
+		}
+		if(inumV < inumC){
+			med = inumC;
+			min = inumB;
+		}
+	if(no1 < no3){
+		max = inumC;
+		med = inumA;
+		min = inumB;
+	}
+}
+
+if(inumA < inumB){
+	if(inumB > inumC){
+		max = inumB;
+	}
+		if(inumA > inumC){
+			med = inumA;
+			min = inumC;
+	}
+		if(inumA < inumC){
+			med = inumC;
+			min = inumA;
+	}
+	if(inumB < inumC){
+		max = inumC;
+		mid = inumB;
+		min = inumA;
+	}
+}
+
+if(inumA > inumB){
+	if(inumA > inumC){
+		max = inumA;
+		if(inumB > inumC){
+			med = inumB;
+			min = inumC;
+		}else{
+			med = inumC;
+			min = inumB;
+		}
+	}else {
+		max = inumC;
+		med = inumA;
+		min = inumB;
+	}
+} else {
+	
+}
+</script>
+</body>
+</html>

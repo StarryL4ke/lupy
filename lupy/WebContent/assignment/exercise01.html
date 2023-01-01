@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../css/chopa.css">
+<style type="text/css">
+</style>
+</head>
+<body>
+	<div class="w3-content mxw650 w3-center"><!-- master div -->
+	 	<h1 class="w3-pink w3-padding w3-card w3-round w3-card-4">Smart join</h1><!-- title -->
+	 	<form method="POST" name="form" id="form" class="w3-col w3-round w3-center w3-card-4 w3-padding w3-margin-top"><!-- form div -->
+	 		<div class="w3-col w3-margin-top"><!-- name div -->
+		 		<label for="name" class="w3-col s12 m3 label1">이 름 : </label>
+		 		<input type="text" name="name" id="name" class="w3-col s12 m7 w3-input w3-border" placeholder="이름을 입력하세요!">
+	 		</div><!-- name div -->
+	 		<div class="w3-col w3-margin-top"><!-- id div -->
+	 			<label for="id" class="w3-col s12 m3 label1">I D : </label>
+		 		<input type="text" name="id" id="id" class="w3-col s12 m5 w3-input w3-border" placeholder="아이디를 입력하세요!">
+		 		<div class="w3-col w3-button w3-blue w3-hover-grey ckbt">check</div>
+	 		</div><!-- id div -->
+	 		<div class="w3-col w3-margin-top"><!-- pw div -->
+	 			<label for="pw" class="w3-col s12 m3 label1">P W : </label>
+		 		<input type="password" name="pw" id="pw" class="w3-col s12 m7 w3-input w3-border" placeholder="비밀번호를 입력하세요!">
+	 		</div><!-- pw div -->
+	 		<div class="w3-col w3-margin-top"><!-- repw div-->
+	 			<label for="repw" class="w3-col s12 m3 label1">re P W : </label>
+		 		<input type="password" name="repw" id="repw" class="w3-col s12 m7 w3-input w3-border" placeholder="비밀번호를 입력하세요!">
+	 		</div><!-- repw div -->
+	 		<div class="w3-col w3-margin-top"><!-- mail div -->
+	 			<label for="mail" class="w3-col s12 m3 label1">mail : </label>
+		 		<input type="text" name="mail" id="mail" class="w3-col s12 m7 w3-input w3-border" placeholder="이메일을 입력하세요!">
+	 		</div><!-- mail div -->
+	 		<div class="w3-col w3-margin-top"><!-- tel div -->
+	 			<label for="tel" class="w3-col s12 m3 label1">phone : </label>
+		 		<input type="text" name="tel" id="tel" class="w3-col s12 m7 w3-input w3-border" placeholder="전화번호를 입력하세요!">
+	 		</div><!-- tel div -->
+	 		<div class="w3-col w3-margin-top">
+				<label for="file" class="w3-col s12 m3 label1">프로필사진 : </label>
+				<div class="w3-col m6 pdl10" id="propic">
+					<input type="file" name="file" id="file" class="textright">
+				</div>
+			</div>
+			<div class="w3-col w3-margin-top w3-margin-bottom" id="preView">
+				<label for="file" class="w3-col m2 w3-right-align label1">미리보기 : </label>
+				<div class="w3-col m8 w3-center">
+					<div class="inblock box100 w3-border w3-card-4">
+						<div class="w3-col w3-border">
+							<img class="img1" id="image1" src="">
+						</div>	
+					</div>
+				</div>
+			</div>
+	 		<div class="w3-col mgt20"><!-- gen -->
+	 			<label for="gen" class="w3-col s12 m3">gender : </label>	 			
+	 			<div class="w3-col s12 m7"><!-- gen radio div -->	
+		 			<div class="w3-half"><!-- gen radio male -->
+			 			<input type="radio" name="gen" id="male" value="male">
+			 				<label for="male">남 자</label>
+		 			</div><!-- gen radio male -->		 			
+		 			<div class="w3-half"><!-- gen radio female -->
+			 			<input type="radio" name="gen" id="female" value="female">
+			 				<label for="female">여 자</label>
+		 			</div><!-- gen radio female -->	 			
+	 			</div><!-- gen radio div -->
+	 		</div><!-- gen -->
+	 		<div class="w3-col mgt20"><!-- Avatar div -->
+	 			<label for="avt" class="w3-col s12 m3">아바타 : </label>
+		 		<div id="avtm" class="w3-col s12 m7" style="display: none;"><!-- radio male -->
+		 			<div class="w3-third pd5">
+<!-- 		 				<img src="../img/img_avatar1.png" id="m1p" style="width: 100%" class="w3-border">
+		 				<input type="radio" name="male" id="m1" value="m1" class="w3-margin-top"> -->
+		 			</div>
+		 			<div class="w3-third pd5">
+<!-- 		 				<img src="../img/img_avatar2.png" id="m2p" style="width: 100%" class="w3-border">
+		 				<input type="radio" name="male" id="m2" value="m2" class="w3-margin-top"> -->
+		 			</div>
+		 			<div class="w3-third pd5">
+<!-- 		 				<img src="../img/img_avatar3.png" id="m3p" style="width: 100%" class="w3-border">
+		 				<input type="radio" name="male" id="m3" value="m3" class="w3-margin-top"> -->
+		 			</div>
+		 		</div><!-- radio male -->	 		
+		 		<div id="avtf" class="w3-col s12 m7" style="display: none;"><!-- radio female -->
+		 			<div class="w3-third pd5">
+<!-- 		 				<img src="../img/img_avatar4.png" id="f1p" style="width: 100%" class="w3-border">
+		 				<input type="radio" name="female" id="f1" value="f1" class="w3-margin-top"> -->
+		 			</div>
+		 			<div class="w3-third pd5">
+<!-- 		 				<img src="../img/img_avatar5.png" id="f2p" style="width: 100%" class="w3-border">
+		 				<input type="radio" name="female" id="f2" value="f2" class="w3-margin-top"> -->
+		 			</div>
+		 			<div class="w3-third pd5">
+<!-- 		 				<img src="../img/img_avatar6.png" id="f3p" style="width: 100%" class="w3-border">
+		 				<input type="radio" name="female" id="f3" value="f3" class="w3-margin-top"> -->
+		 			</div>
+		 		</div><!-- radio female -->
+	 		</div><!-- Avatar div -->
+	 	</form><!-- formdiv -->	 	
+	 	<div class="w3-col w3-margin-top"><!-- button div -->
+			<div class="w3-col s12 m4 w3-button w3-round w3-card-4 w3-green w3-hover-lime">home</div>
+			<div class="w3-col s12 m4 w3-button w3-round w3-card-4 w3-orange w3-hover-purple">join</div>
+			<div class="w3-col s12 m4 w3-button w3-round w3-card-4 w3-blue w3-hover-indigo">login</div>
+		</div><!-- button div -->
+	</div><!-- masterdiv -->
+<script type="text/javascript" src="../js/jquery-3.6.1.min.js"></script>
+<script type="text/javascript">
+
+/*	<input type="file" name="file_1" id="file_1"> */
+/*	<input type="button" value="X" id="a" onclick="add()"/>
+	<div id="new_input"></div>
+	<script>
+	var i = 1;
+	function add() {
+	    var element = document.createElement("input");
+	    element.type = 'button';
+	    element.value = "a"+i;
+	    element.name = "a"+i;
+	    element.id = "a"+i++;
+	    var foo = document.getElementById("new_input");
+	    foo.appendChild(element);
+	} */
+	
+	
+	$(document).ready(function(){
+		var no = 0;
+		$('#file').change(function(evt){
+			var input = document.createElement('input');
+			$(input).attr('type', 'file').attr('name', 'file').attr('id', 'file' +no++).addClass('textright').appendTo('#propic');
+		});
+		$('#propic').on('change', '.textright', function(){
+			var sid = $(this).attr('id');
+			alert(sid); 
+		});
+		
+//		1. evt 이름 부여후
+//		2. evt 등록될 태그 선택자
+//		3. evt 처리 함수
+			 
+			
+	});
+//			$('#propic').append('<input type="file" name="file" id="file' +no++ +'" class="textright">')
+
+//		 $('#file').change(function(){
+//			var input = document.createElement('input')
+//			$(input).attr('type', 'file').attr('name', 'file').attr('id', 'file').appendTo('.pdl10');
+
+	
+//			var input = document.createElement('input');
+//			$(input).attr('type', 'file').attr('name', 'file_' + i).attr('id', 'file_' + i);
+//			$(input).appendTo('.pdl10');
+
+		
+		
+/* 	 		$('#preView').stop().slideUp(300, function(){
+				var path = URL.createObjectURL(evt.target.files[0]);
+				$('#image1').attr('src', path);
+				$('#preView').slideDown(1000);			
+			});
+		}); */
+
+</script>
+</body>
+</html>

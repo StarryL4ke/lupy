@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../css/chopa.css">
+<style type="text/css">
+
+</style>
+</head>
+<body>
+
+<script type="text/javascript">
+//	document.write(['ab', 'a', 'abc', 'abcd'].sort());
+	
+	//랜덤하게 원의 반지름을 5개 기억하는 배열을 만드세요.
+	
+	var rad = [];
+	
+	for(var i = 0 ; i < 5 ; i++){
+		var no = parseInt(Math.random() * 20) + 1;
+		rad[i] = no;
+	}
+//	document.write(rad + '<br>');
+	// 위 배열의 데이터를 반지름으로 하는 원의 둘레를 기억할 배역
+	var arround = rad.map(function(item){
+		return parseInt(2 * item * 3.14 * 100) / 100;
+	})
+	
+//	document.write(arround + '<br>');
+	
+	var dongle = rad.map(function(data){
+		var arround = parseInt(2 * data * 3.14 * 1000 + 5) / 1000;
+		var area = parseInt(data * data * 3.14 * 1000 + 5) / 1000;
+		return [data, arround, area];
+	})
+	for(var i = 0 ; i < dongle.length ; i++){
+	//	document.write(dongle + '<br>');
+	}
+	document.write('<div class="w3-content mxw550">');
+	dongle.forEach(function(data, idx){
+	/* 	document.write('반지름:' + data[0] + '<br>');
+		document.write('둘레:' + data[1] + '<br>');
+		document.write('넓이:' + data[2] + '<br>'); */
+		document.write('<div class="w3-col w3-padding w3-margin-top w3-margin-bottom w3-card-4">');
+			data.forEach(function(item, index){
+				document.write('<div class="w3-col">');
+					switch(index){
+					case 0:
+						document.write('<h4 class="w3-col m3 w3-right-align">반 지 름 : </h4>');
+						break;
+					case 1:
+						document.write('<h4 class="w3-col m3 w3-right-align">원 둘 레 : </h4>');
+						break;
+					case 2:
+						document.write('<h4 class="w3-col m3 w3-right-align">원 넓 이 : </h4>');
+						break;
+					};
+				document.write('<h4 class="w3-col m6 w3-center">' + item + '</h4>');
+				document.write('</div');	
+			});
+		document.write('</div');
+	});
+	document.write('</div>');
+</script>
+</body>
+</html>

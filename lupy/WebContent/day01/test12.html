@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+/*
+		키보드로 입력 받는 방법 
+		[window.]prompt('메세지');
+		
+		키보드로 입력 받은 데이터를 문자열로 반환해준다.
+		따라서 숫자의 경우 해당 타입으로 변해줘야한다.
+		
+		숫자 형태의 문자열을 정수로 변환하는 방법
+		
+		ParaseInt(문자열)
+*/
+	var sno = prompt('정수 입력 : '); //10
+	alert(typeof sno); //string
+	
+	var result1 = sno + 1;
+	document.write('sno + 1 : ' + result1 + '<br>'); //101
+	
+	var no1 = parseInt(sno);
+	document.write('sno : ' + result1 + '<br>'); //101
+	//문자열을 정수로 전환
+	
+	var result2 = no1 + 1;
+	document.write('no1 + 1 : ' + result2 + '<br>'); //12
+	
+// 	alert(typeof no1);
+	document.write('no1 - 5 : ' + (no1 -5) +'<br>');
+	document.write('no1 * 2 : ' + no1 * 2 + '<br>');
+	document.write('no1 /3 : ' + no1 / 3 + '<br>');
+	document.write('no1 % 3 : ' + no1 % 3 + '<br>');
+	
+	
+	//증감 연산자
+/* 
+	증감 연산자로 사용하는 기호 이후에 나오는 변수에 +1 또는 -1을 딱 한번 해주는것.
+*/
+	++result2; // -> 12
+	document.write('++result2 : ' + result2++ +'<br>'); //11
+	document.write('no1 : ' + no1 + '<br>');
+	document.write('result2 : ' + result2 + '<br>'); //13
+</script>
+</head>
+<body>
+
+</body>
+</html>

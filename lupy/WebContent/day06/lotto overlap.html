@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../css/chopa.css">
+<style type="text/css">
+	
+</style>
+</head>
+<body>
+	<div class="w3-content mxw650 w3-center">
+		<h1 class="w3-blue w3-padding w3-card-4">이번주 로또번호</h1>
+		<div class="w3-pale-blue w3-padding w3-card-4 w3-margin-top">
+			<p>FIRST   </p>
+			<span id="one"></span>
+		</div>		
+		<div class="w3-pale-blue w3-padding w3-card-4 w3-margin-top">
+			<p>SECOND   </p>
+			<span id="two"></span>
+		</div>		
+		<div class="w3-pale-blue w3-padding w3-card-4 w3-margin-top">
+			<p>THIRD   </p>
+			<span id="three"></span>
+		</div>		
+		<div class="w3-pale-blue w3-padding w3-card-4 w3-margin-top">
+			<p>FOURTH   </p>
+			<span id="four"></span>
+		</div>		
+		<div class="w3-pale-blue w3-padding w3-card-4 w3-margin-top">
+			<p>FIFTH   </p>
+			<span id="five"></span>
+		</div>		
+	</div>
+<script type="text/javascript">
+/* 
+	lotto number = 1 ~ 45 6-digit
+*/
+//1번-선택정렬-오름차순
+	var lotto = [];
+	loop:
+	for(var i = 0 ; lotto.length < 6 ; i++ ){		
+		var no = parseInt(Math.random() * 45) + 1;		
+		for(var j = 0 ; j < i ; j++){
+			if(lotto[j] == no){
+				i--;
+				continue loop;
+			}
+		}
+		lotto[i] = no;
+	}
+	var arr = lotto;
+	for(var i = 0 ; i < arr.length -1 ; i++ ){
+		for(var j = i + 1 ; j < arr.length ; j++ ){
+			if(arr[i] > arr[j]){
+				var tmp = arr[i];
+				arr[i] = arr[j];
+				arr[j] = tmp;
+			}
+		}
+	}
+	document.getElementById('one').innerHTML = arr;
+//2번-선택정렬-내림차순
+	var lotto = [];
+	loop:
+	for(var i = 0 ; lotto.length < 6 ; i++ ){
+		
+		var no = parseInt(Math.random() * ( 45 - 1 + 1 )) + 1;
+		
+		for(var j = 0 ; j < i ; j++){
+			if(lotto[j] == no){
+				i--;
+				continue loop;
+			}
+		}
+		lotto[i] = no;
+	}
+	var arr = lotto;
+	for(var i = 0 ; i < arr.length -1 ; i++ ){
+		for(var j = i + 1 ; j < arr.length ; j++ ){
+			if(arr[i] < arr[j]){
+				var tmp = arr[i];
+				arr[i] = arr[j];
+				arr[j] = tmp;
+			}
+		}
+	}
+	document.getElementById('two').innerHTML = arr;
+//3번-버블정렬-오름차순
+	var lotto = [];
+	loop:
+	for(var i = 0 ; lotto.length < 6 ; i++ ){
+		
+		var no = parseInt(Math.random() * ( 45 - 1 + 1 )) + 1;
+		
+		for(var j = 0 ; j < i ; j++){
+			if(lotto[j] == no){
+				i--;
+				continue loop;
+			}
+		}
+		lotto[i] = no;
+	}
+	var arr = lotto;
+	
+	for(var i = 0 ; i < arr.length - 1 ; i++ ){
+		for(var j = 0 ; j < arr.length - 1 - i ; j++ ){
+			if(arr[j] > arr[j + 1]){
+				var tmp = arr[j];
+				arr[j] = arr[j + 1];
+				arr[j + 1] = tmp;
+			}
+		}
+	}
+
+/*
+	for(var i = 0 ; i < arr.length -1 ; i++ ){
+		for(var j = i + 1 ; j < arr.length ; j++ ){
+			if(arr[i] > arr[j]){
+				var tmp = arr[i];
+				arr[i] = arr[j];
+				arr[j] = tmp;
+			}
+		}
+	}
+*/
+	document.getElementById('three').innerHTML = arr;
+//4번///////////////////////////////////////////////////////////
+	var lotto = [];
+	loop:
+	for(var i = 0 ; lotto.length < 6 ; i++ ){
+		
+		var no = parseInt(Math.random() * ( 45 - 1 + 1 )) + 1;
+		
+		for(var j = 0 ; j < i ; j++){
+			if(lotto[j] == no){
+				i--;
+				continue loop;
+			}
+		}
+		lotto[i] = no;
+	}
+	var arr = lotto;
+	for(var i = 0 ; i < arr.length -1 ; i++ ){
+		for(var j = i + 1 ; j < arr.length ; j++ ){
+			if(arr[i] > arr[j]){
+				var tmp = arr[i];
+				arr[i] = arr[j];
+				arr[j] = tmp;
+			}
+		}
+	}
+	document.getElementById('four').innerHTML = arr;
+//5번/////////////////////////////////////////////////////////////////
+	var lotto = [];
+	loop:
+	for(var i = 0 ; lotto.length < 6 ; i++ ){
+		
+		var no = parseInt(Math.random() * ( 45 - 1 + 1 )) + 1;
+		
+		for(var j = 0 ; j < i ; j++){
+			if(lotto[j] == no){
+				i--;
+				continue loop;
+			}
+		}
+		lotto[i] = no;
+	}
+	var arr = lotto;
+	for(var i = 0 ; i < arr.length -1 ; i++ ){
+		for(var j = i + 1 ; j < arr.length ; j++ ){
+			if(arr[i] > arr[j]){
+				var tmp = arr[i];
+				arr[i] = arr[j];
+				arr[j] = tmp;
+			}
+		}
+	}
+	document.getElementById('five').innerHTML = arr;
+</script>
+</body>
+</html>

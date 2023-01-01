@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../css/chopa.css">
+</head>
+<body>
+	<div class="w3-content mxw650">
+		<h1 class="w3-blue w3-center w3-padding">전기요금 계산기</h1>
+		<!-- 입력태그 -->
+		<div class="w3-col w3-padding w3-card-4 w3-margin-top w3-margin-bottom">
+			<div class="w3-col">
+				<label for="code" class="w3-col m2">사용 용도 : </label>
+				<select name="code" id="code" class="w3-col m9 w3-select">
+					<option selected># 사용 용도 #</option>
+					<option value="1">가정용</option>
+					<option value="2">산업용</option>
+					<option value="3">교육용</option>
+					<option value="4">상업용</option>
+				</select>
+			</div>
+			<div class="w3-col w3-margin-top">
+				<label for="qt" class="w3-col m2">사용 량 : </label>
+				<input type="text" name="qt" id="qt" class="w3-col m9 w3-input w3-border">
+			</div>
+		</div>
+		<!-- 버튼태그 -->
+		<div class="w3-col w3-card-4">
+			<div class="w3-half w3-button w3-orange" id="rbtn">리셋하기</div>
+			<div class="w3-half w3-button w3-blue" id="cbtn">계산하기</div>
+		</div>
+	</div>
+
+
+
+
+<script type="text/javascript">
+/* 	
+ 
+var name = prompt('이름입력 : ');
+	switch(name){
+	case 'chopa':
+		result = '의사';
+		break;
+	case 'lupy':
+		result = '선장';
+		break;
+	case 'nami':
+		result = '항해사';
+		break;
+	case 'jolo':
+		result = '검사';
+		break;
+	default:
+		result = '머슴';
+	}
+	
+
+	alert('입력받은 사람은' + result + '입니다.'); 
+*/	
+</script>
+</body>
+</html>

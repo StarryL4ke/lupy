@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../css/chopa.css">
+<style type="text/css">
+
+</style>
+</head>
+<body>
+
+<script type="text/javascript">
+	var arr = [];
+	for(var i = 0 ; i < 20 ; i++){
+		arr[i] = parseInt(Math.random() * 20) + 1;
+	}
+	for(var i = 0 ; i < arr.length ; i++){
+		document.write(arr[i] + ' | ');
+	}
+	document.write('<br>');
+	
+	var func01 = function(data){
+		return data > 9;
+	};
+	
+	var newArr = arr.filter(func01);
+	
+	function printArr(arr){
+		document.wirte('<h1 class="w3-text-green w3-center">');\
+		for(var i = 0 ; i < arr.length ; i++){
+			document.write(arr[i] + ' | ');
+		}
+		document.write('')
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+/* 
+	두개의 정수를 입력받아서 그 수들을 밑변, 높이라 가정하고 삼각형의 면적을 구해주는 프로그램을 작성하세요.
+	
+	실행예 ]
+		밑변 : xxx
+		높이 : ***
+		면적 : ****.**
+		
+	참고 ]
+	
+	삼각형의 면적 구하는 방법 = 밑변 * 높이 / 2
+*/
+/* 
+	var width = prompt('밑변을 입력하시오');
+	var height = prompt('높이를 입력하시오');
+	var radius = prompt('반지름을 입력하시오');	
+	var iwidth = parseInt(width);
+	var iheight = parseInt(height);
+	var iradius = parseInt(radius);
+*/
+/* 
+	abc()의 반환값이 10이라고 가정하면
+	var no = abc() + 300;
+	=>	var no = 10 + 300; 이 될것이고
+		var no = 310;
+*/	
+
+while(true){
+	
+	var dohyong = prompt('만들도형을 입력하세요');
+	if(dohyong == 'q'){
+		alert('프로그램을 종료 합니다');
+		break; //break: 명령은 감싸고 있는 반복문과 switch~case 명령을 즉시 종료하는 명령어
+		}
+	
+	
+	switch(dohyong){
+		case '원':
+	var iradius= parseInt(prompt('반지름: '));
+	var round = 2 * iradius * 3.14;
+	var area1 = iradius * iradius * 3.14;
+	document.write('<h3>입력 받은 반지름: ' + iradius + '<br>원의 둘레: ' + round + '<br>원의 넓이 넓이: ' + area1);
+			
+			break;
+		case '세모':
+	var iwidth = parseInt(prompt('밑변: '));
+	var iheight = parseInt(prompt('높이: '));
+	var area3 = iwidth * iheight / 2;
+	document.write('<h3>입력 받은 밑변: ' + iwidth + '<br>입력 받은 높이: ' + iheight + '<br>세모 넓이: ' + area3);
+			
+			break;
+		case '네모':
+	var iwidth = parseInt(prompt('밑변: '));
+	var iheight = parseInt(prompt('높이: '));
+	var area4 = iwidth * iheight ;
+	document.write('<h3>입력 받은 밑변: ' + iwidth + '<br>입력 받은 높이: ' + iheight + '<br>네모 넓이: ' + area4 );
+			
+			break;
+	}
+}
+	
+	
+	
+	
+	
+	
+	
+</script>
+</body>
+</html>

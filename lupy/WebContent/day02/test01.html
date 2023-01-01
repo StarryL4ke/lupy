@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h3 style="text-align: center">나이 : <span id="age">나이</span></h3>
+	<h3 style="text-align: center">결과 : <span id="result1">결과</span></h3>
+<script type="text/javascript">
+/* 
+대입 연산자
+=>	변수에 데이터를 대입할 때 사용하는 연산자
+	제일 나중에 실행되는 연산자.
+	진행방향이 오른쪽에서 왼쪽으로 진행한다.
+	
+	연산 기호]
+		=		
+		+=
+		-=
+		*=
+		/=
+		%=
+			
+	var no = 10;
+	
+		no += 2;
+		=> no = no +2;
+		
+		no -= 10;
+		=> no = no -10;
+		
+		no *= 3;
+		=> no = no * 3;
+		
+		no /= 7;
+		=> no = no / 7;
+		
+		no %= 9;
+		=> no = no % 9;
+*/
+var no = prompt('나이 입력 : ')
+var sno = parseInt(no)
+var result = (sno >= 20)? '성인' : '미성년자';
+	document.getElementById('age').innerHTML = sno;
+	document.getElementById('result1').innerHTML = result;
+</script>
+</body>
+</html>

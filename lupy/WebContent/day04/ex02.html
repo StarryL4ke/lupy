@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../css/chopa.css">
+<style type="text/css">
+
+</style>
+</head>
+<body>
+			<span id="result"></span>
+<script type="text/javascript">
+
+/* 	var nums = [1, 2, 3, 4, 5];
+	alert(nums instanceof Arry ? '배열 맞음' : '배열 틀림'); */
+
+/*
+	5자리 숫자를 입력 받아서
+	각자리의 숫자를 기억하는 배열에 기억시키고
+	각 자리수의 합을 출력해주는 프로그램을 작성하세요.
+	
+	예]	12345
+		[1,2,3,4,5] 로 만들고
+		합 : 15 
+*/
+/* 
+	var num = prompt('5자리숫자입력');
+		for(var i = 0 ; i < num.length ; i++ ){
+			var sum = parseInt(num[0]) + parseInt(num[1]) + parseInt(num[2]) + parseInt(num[3]) + parseInt(num[4])
+			document.getElementById('result').innerHTML = '<h1 style="text-align: center;">' + sum + '</h1>';
+		}
+*/
+
+
+		var num = prompt('5자리 숫자 입력 : ');
+
+		var arr = [num[0], num[1], num[2], num[3], num[4]];
+		
+//		for(var i = 0 ; i < arr.length ; i++ ){
+			var sum = parseInt(arr[0]) + parseInt(arr[1]) + parseInt(arr[2]) + parseInt(arr[3]) + parseInt(arr[4])
+	//	}
+alert(sum);
+
+
+	for(var h = 0 ; h < 10 ; h++ ){
+		for(var i = 0 ; i < 5 ; i++ ){
+			document.write('*');
+		}
+		document.write('<br>');
+	}
+</script>
+</body>
+</html>

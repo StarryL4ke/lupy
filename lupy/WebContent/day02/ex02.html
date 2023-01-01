@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+/*
+	산술 연산자 연습문제
+	
+	76572 원을 지불하려고 한다.
+	필요한 화폐단위가 몇개씩인진 계산해서 출력하세요.
+	
+	참고 ]
+		화폐단위
+			50000, 10000, 5000, 1000, 500, 100, 50, 10, 1
+			
+	변수를 만들고 변수에 계산된 값을 입력해서 출력하세요.
+	
+	참고 ]
+		실수를 정수로 바꾸는 방법
+			parseInt(실수)
+ */
+ var total = 76572;
+ var calc = total;
+ var tier1 = parseInt(calc / 50000);
+ 	calc = calc % 50000;
+ var tier2 = parseInt(calc / 10000);
+ 	calc = calc % 10000;
+ var tier3 = parseInt(calc / 5000);
+ 	calc = calc % 5000;
+ var tier4 = parseInt(calc / 1000);
+ 	calc = calc % 1000;
+ var tier5 = parseInt(calc / 500);
+ 	calc = calc % 500;
+ var tier6 = parseInt(calc / 100);
+ 	calc = calc % 100;
+ var tier7 = parseInt(calc / 50);
+ 	calc = calc % 50;
+ var tier8 = parseInt(calc / 10);
+ 	calc = calc % 10;
+ var tier9 = parseInt(calc / 1);
+ 	calc = calc % 1;
+ 	
+ 	
+ 	document.write(total + '원은 ' + '<br>');
+ 	document.write('오만원권 :' + tier1 + '장<br>');
+ 	document.write('만원권 :' + tier2 + '장<br>');
+ 	document.write('오천원권 :' + tier3 + '장<br>');
+ 	document.write('천원권 :' + tier4 + '장<br>');
+ 	document.write('오백원권 :' + tier5 + '장<br>');
+ 	document.write('백원권 :' + tier6 + '장<br>');
+ 	document.write('오십원권 :' + tier7 + '장<br>');
+ 	document.write('십원권 :' + tier8 + '장<br>');
+ 	document.write('일원권 :' + tier9 + '장<br>');
+ 	document.write('이 필요합니다.')
+ 	
+ 	
+ 	
+
+ var total = 76572;
+ var cal = total;
+ var tier1 = parseInt(calc / 50000);
+ 	cal = cal % 50000;
+ var tier2 = parseInt(calc / 10000);
+ 	cal = cal % 10000;
+ var tier3 = parseInt(calc / 5000);
+ 	cal = cal % 5000;
+ var tier4 = parseInt(calc / 1000);
+ 	cal = cal % 1000;
+ var tier5 = parseInt(calc / 500);
+ 	cal = cal % 500;
+ var tier6 = parseInt(calc / 100);
+ 	cal = cal % 100;
+ var tier7 = parseInt(calc / 50);
+ 	cal = cal % 50;
+ var tier8 = parseInt(calc / 10);
+ 	cal = cal % 10;
+ var tier9 = parseInt(calc / 1);
+ 	cal = cal % 1;
+ 	
+ 	
+</script>
+</head>
+<body>
+
+</body>
+</html>

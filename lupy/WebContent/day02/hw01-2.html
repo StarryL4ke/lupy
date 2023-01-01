@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<div style="text-align: center; font-size: 14pt;">maximum: <span id="maximum" ></span></div>
+<div style="text-align: center; font-size: 14pt;">median: <span id="median" ></span></div>
+<div style="text-align: center; font-size: 14pt;">minimum: <span id="minimum" ></span></div>
+
+<script type="text/javascript">
+/*
+var numA = prompt('A - 숫자를 입력하세요')
+var numB = prompt('B - 숫자를 입력하세요')
+var numC = prompt('C - 숫자를 입력하세요')
+
+var inumA = parseInt(numA)
+var inumB = parseInt(numB)
+var inumC = parseInt(numC)
+
+
+
+var resultA = (inumB < inumA&inumA > inumC)? '가장 큰 수는 ' + inumA : 'false'
+var resultB = (inumC < inumB&inumB > inumA)? '가장 큰 수는' + inumB : 'false'
+var resultC = (inumA < inumA&inumC > inumB)? '가장 큰 수는' + inumC : 'false'
+	document.getElementById('gt').innerHTML = resultA;
+	document.getElementById('gt').innerHTML = resultB;
+	document.getElementById('gt').innerHTML = resultC; 
+*/
+
+var no1 = parseInt(prompt('정수입력: '))
+var no2 = parseInt(prompt('정수입력: '))
+var no3 = parseInt(prompt('정수입력: '))
+
+var max = (no1 > no2) ? (no1 > no3 ? no1 : no3) : (no2 > no3 ? no2 : no3) ;
+	document.getElementById('maximum').innerHTML = max;
+var med = (no1 > no2) ? (no1 < no3 ? no1 : no3) : (no2 < no3 ? no2 : no3) ;
+	document.getElementById('median').innerHTML = med;
+var min = (no1 < no2) ? (no1 < no3 ? no1 : no3) : (no2 < no3 ? no2 : no3) ;
+	document.getElementById('minimum').innerHTML = min;
+
+
+</script>
+</body>
+</html>

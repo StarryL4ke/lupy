@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../css/chopa.css">
+<style type="text/css">
+
+</style>
+</head>
+<body>
+
+<script type="text/javascript">
+/*
+	sort() : 데이터를 오름차순으로 정렬하는 함수
+	reverse() : 데이터를 역순으로 수정하는 함수
+ */
+ 
+ 	var lotto = [];
+	loop:
+	for(var i = 0 ; i < 6 ; i++ ){
+//	매 회차마다 번호를 만들고
+		var no = parseInt(Math.random() * 45 ) + 1;
+		for(var j = 0 ; j < i ; j++ ){
+			if(lotto[j] == no){
+				i--;
+				continue loop;
+			}
+		}
+		lotto[i] = no;
+	}
+	document.write('정렬전 번호: ' + lotto + '<br>');
+	
+	lotto.sort();
+	document.write('정렬후 번호: ' + lotto + '<br>');
+	lotto.sort(function(a, b){
+		return a - b;
+	});
+	document.write('wjdfuf : ' + lotto + '<br>');
+	
+	
+	
+	lotto.reverse();
+	document.write('반대로 : ' + lotto + '<br>');
+	
+</script>
+</body>
+</html>

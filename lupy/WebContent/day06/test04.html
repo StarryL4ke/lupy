@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../css/chopa.css">
+<style type="text/css">
+
+</style>
+</head>
+<body>
+
+<script type="text/javascript">
+	var city = [
+		'서울', '부산', '부평', '수원', '안산'
+	];
+	
+	function printArr(){
+		if(city instanceof Array){
+			document.write('배열 객체가 생성되었습니다. <br>');
+			
+			for(var i = 0 ; i < city.length ; i++ ){
+				document.write((i + 1) + ' 번째 도시 : ' + city[i] + '<br>')
+			}
+		}else{
+			document.write('배열객체가 아닙니다. <br>');
+			document.write('city : ' + city + '<br>');
+		}
+	}
+	
+	printArr();
+	document.write('<p> typeof city : ' + typeof city + '</p>');
+	document.write('<p> city type : ' + ( Array.isArray(city) ? '배열 맞음' : '배열 아님' ) + '</p>');
+</script>
+</body>
+</html>

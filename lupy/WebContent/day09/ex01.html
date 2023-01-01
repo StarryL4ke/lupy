@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../css/chopa.css">
+<style type="text/css">
+ 	#fr2 {
+		display: none;
+	}
+</style>
+</head>
+<body>
+	<div class="w3-content mxw650" id="fr1">
+		<h1 class="w3-green w3-padding w3-center">정보입력</h1>
+		<div class="w3-col w3-margin-top w3-card-4">
+			<div class="w3-col w3-margin-top">
+				<label class="w3-col m3 w3-right-align label1" for="sid">I D : </label>
+				<div class="w3-col m7 pdl10">
+					<input type="text" name="sid" id="sid" class="w3-input w3-border">
+				</div>
+			</div>
+			<div class="w3-col w3-margin-top w3-margin-bottom">
+				<label class="w3-col m3 w3-right-align label1" for="spw">P W : </label>
+				<div class="w3-col m7 pdl10">
+					<input type="password" name="spw" id="spw" class="w3-input w3-border">
+				</div>
+			</div>
+		</div>
+		<div class="w3-col w3-margin-top w3-card-4">
+			<div class="w3-half w3-orange w3-button" id="rbtn">reset</div>
+			<div class="w3-half w3-orange w3-button" id="cbtn">confirm</div>
+		</div>
+	</div>
+	
+	<div class="w3-content mxw650" id="fr2">
+		<h1 class="w3-green w3-padding w3-center">정보확인</h1>
+		<div class="w3-col w3-margin-top w3-card-4">
+			<div class="w3-col w3-margin-top">
+				<h3 class="w3-col m3 w3-right-align label1">I D : </h3>
+				<h3 class="w3-col m7 pdl10" id="pid"></h3>
+			</div>
+			<div class="w3-col w3-margin-top w3-margin-bottom">
+				<h3 class="w3-col m3 w3-right-align label1">P W : </h3>
+				<h3 class="w3-col m7 pdl10" id="ppw"></h3>
+			</div>
+		</div>
+		<div class="w3-col w3-margin-top w3-card-4">
+			<div class="w3-half w3-orange w3-button" id="bbtn">뒤로가기</div>
+			<div class="w3-half w3-orange w3-button" id="sbtn">전송하기</div>
+		</div>
+	</div>
+ 	<form method="GET" action="result.html" name="frm" id="frm">
+<!-- 
+		<input type="hidden" name="id" id="id">
+		<input type="hidden" name="pw" id="pw">
+ -->
+	</form> 
+	
+<!-- <script type="text/javascript" src="../js/day09/ex01.js"></script> -->
+<script type="text/javascript" src="../js/jquery-3.6.1.min.js">
+/*
+	입력 태그의 입력 내용을 꺼내는 함수	:	val()
+	일반 태그의 내용을 꺼내는 함수	:	html()
+	
+	내용 입력
+	
+		입력태그 : $(태그선택).val(data);
+		일반태그 : $(태그선택).html(data);
+ */
+</script>
+<script type="text/javascript">
+	$(function(){
+		//리셋 버튼 할당
+		$('#rbtn').click(function(){
+			$('#sid').val('');
+			$('#spw').val('');
+//			$('#fr1 input').val('');
+		});
+		//확인 버튼 할당
+		$('#cbtn').click(function(){
+			//변수 배정
+			var send_id = $('#sid').val();
+			var send_pw = $('#spw').val();
+			
+			$('#pid').addClass('w3-center').html(send_id);
+			$('#ppw').addClass('w3-center').html(send_pw);
+			$('#sid').val('');
+			$('#spw').val('');
+//			$('#fr1 input').val('');
+			$('#fr1').css('display', 'none');
+			$('#fr2').css('display', 'block');
+		});
+		//뒤로 버튼 할당
+		$('#bbtn').click(function(){
+/* 			$('#pid').html('');
+			$('#ppw').html('');
+			$('#fr1').css('display', 'block');
+			$('#fr2').css('display', 'none'); */
+			$('#pid, #ppd').html('').parents().filter('#fr2').css('display','none').prev().css('display','block')
+		});
+		//전송 버튼 할당
+		$('#sbtn').click(function(){
+			//변수 배정
+			var form_id =  $('#pid').html();
+			var form_pw =  $('#ppw').html();			
+			var inputId = document.createElement('input');
+			var inputPw = document.createElement('input');
+			
+			$(inputId).attr('type','hidden').attr('name','id').attr('id','id').val(form_id);
+			$(inputPw).attr('type','hidden').attr('name','pw').attr('id','pw').val(form_pw);
+			$('#frm').append($(inputId));
+			$('#frm').append($(inputPw));			
+			$('#frm').css('display', 'block');
+			$('#frm').submit();
+		});
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../css/chopa.css">
+<style type="text/css">
+
+</style>
+</head>
+<body>
+	<div class="w3-content mxw650 w3-center">
+		<h1 class="w3-lime w3-padding" id="title">mouse event</h1>
+		<div class="w3-col w3-margin-top">
+			<div class="inblock box100 w3-yellow mgb10 mgl10">div1</div>
+			<div class="inblock box100 w3-yellow mgb10 mgl10">div2</div>
+			<div class="inblock box100 w3-yellow mgb10 mgl10">div3</div>
+			<div class="inblock box100 w3-yellow mgb10 mgl10">div4</div>
+			<div class="inblock box100 w3-yellow mgb10 mgl10">div5</div>
+			<div class="inblock box100 w3-yellow mgb10 mgl10">div6</div>
+			<div class="inblock box100 w3-yellow mgb10 mgl10">div7</div>
+		</div>
+	</div>
+<script type="text/javascript" src="../js/jquery-3.6.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#title').click(function(){
+			$(this).toggleClass('w3-lime w3-red');
+		});
+		$('#title').mousemove(function(){
+			var red = parseInt(Math.random()*256);
+			var green = parseInt(Math.random()*256);
+			var blue = parseInt(Math.random()*256);
+			$(this).removeClass('w3-lime w3-red');
+			$(this).css('background-color', 'rgb('+red+', '+green+', '+blue+')');
+		})
+/*
+		$('.box100').mouseover(function(){
+			$(this).removeClass('w3-yellow').addClass('w3-orange');
+			$(this).css('width', '200px').css('height', '200px');			
+		});
+		$('.box100').mouseout(function(){
+			$(this).removeClass('w3-orange').addClass('w3-yellow');
+			$(this).css('width', '100px').css('height', '100px');			
+		});
+*/
+		$('.box100').hover(function(){
+			if($(this).hasClass('w3-yellow')){
+				$(this).removeClass('w3-yellow').addClass('w3-orange');
+//				$(this).css('width', '200px').css('height', '200px');				
+			} else {
+				$(this).removeClass('w3-orange').addClass('w3-yellow');
+//				$(this).css('width', '100px').css('height', '100px');
+			};
+		});
+//		1.		클래스가 box100인 태그들에 아이디 속성값을 부여하고
+//		2.		그 태그가 클릭이 되면 아이디 속성값을 출력하시오
+
+/* 		$('.box100').each(function(index){
+			$(this).attr('id', 'box' + index);
+		}) */
+		$('.box100').each(function(idx){
+			$(this).attr('id', 'box' + (idx+1));
+			
+		});
+		
+/* 		var tags = $('.box100');
+		
+		for(var i = 0 ; i < tags.get().length ; i++){
+			tags.eq(i).attr('id', 'box' + (i+1));
+		} */
+		
+		$('.box100').click(function(){
+			var tmp1 = $(this).attr('class');
+			var tmp2 = $(this).attr('id');
+			alert(tmp1 + tmp2);
+		});
+		
+		});
+</script>
+</body>
+</html>

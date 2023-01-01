@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../css/chopa.css">
+<style type="text/css">
+
+</style>
+</head>
+<body>
+
+<script type="text/javascript">
+	var arr = [7, 2, 5, 1, 3, 9, 6, 4, 10, 8];
+	//선택정렬
+	for(var i = 0 ; i < arr.length -1 ; i++ ){
+		for(var j = i + 1 ; j < arr.length ; j++ ){
+			if(arr[i] > arr[j]){
+				//나중에 데이터가 작은 경우이므로 위치를 바꿔준다.
+				var tmp = arr[i];
+				arr[i] = arr[j];
+				arr[j] = tmp;
+			}
+		}
+	}
+	document.write(arr);
+</script>
+</body>
+</html>

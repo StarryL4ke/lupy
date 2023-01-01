@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../css/chopa.css">
+<style type="text/css">
+
+</style>
+</head>
+<body>
+
+<script type="text/javascript">
+/*
+	'[도서리뷰]모던 웹을 위한 JavaScript + jQuery 입문(3판)'
+	이라는 문자열을 변수에 기억시키고 새로운 변수에 위 변수에 기억된 내용을 거꾸로 꺼내서 채워주세요.
+	그리고 출력하세요.
+*/
+	var str = '[도서리뷰]모던 웹을 위한 JavaScript + jQuery 입문(3판)' //41자
+/* 	
+	for(var i = 0 ; i < 2 ; i++ ){
+		var no1 = sno[i];
+		var no2 = sno[sno.length -1 -i];
+	}
+*/
+
+//1.변수에 문자열을 담는다.
+var str = '[도서리뷰]모던 웹을 위한 JavaScript + jQuery 입문(3판)'
+//2.새로운 변수를 만든다.
+var alpha = '' ;
+//3.문자열의 길이를 알아낸다.41자x
+var len = str.length;
+var lastIdx = len - 1;
+//4.뒤에서 부터 꺼내서 누적시켜준다.
+for(var i = lastIdx ; i >= 0 ; i--){
+	alpha = alpha + str[i];
+}
+	document.write(alpha);
+	
+	
+	
+	
+//5.출력한다.
+</script>
+</body>
+</html>

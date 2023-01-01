@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../css/chopa.css">
+<style type="text/css">
+
+</style>
+</head>
+<body>
+	<div class="w3-content mxw600">
+		<h1 class="w3-blue w3-padding w3-margin-top w3-card-4 w3-center">Login</h1>
+		<form method="GET" action="result.html" name="frm" id="frm" class="w3-col w3-padding w3-card-4">
+			<div class="w3-col w3-margin-top mgb10">
+				<label for="id" class="w3-col m3 w3-right-align">아 이 디</label>
+				<div class="w3-col m8 pdl10">
+					<input type="text" name="id" id="id" class="w3-input w3-border" placeholder="아이디를 입력하시오">
+				</div>
+				<label for="pw" class="w3-col m3 w3-right-align w3-margin-top">비밀번호</label>
+				<div class="w3-col m8 pdl10 w3-margin-top">
+					<input type="password" name="pw" id="pw" class="w3-input w3-border" placeholder="비밀번호를 입력하시오">
+				</div>
+			</div>
+		</form>
+		<div class="w3-col w3-margin-top w3-card-4">
+			<div class="w3-third w3-button w3-green" id="btn1">btn1</div>
+			<div class="w3-third w3-button w3-blue" id="btn2">btn2</div>
+			<div class="w3-third w3-button w3-purple" id="btn3">btn3</div>
+		</div>
+		<div class="w3-col w3-margin-top" style="display: none;" id="fr">
+			<div class="w3-col">
+				<div class="w3-col m3 w3-right-align">
+					<h4>아 이 디 : </h4>
+				</div>
+				<div class="w3-col m7 w3-center pdl10">
+					<h4 id="txt1"></h4>
+				</div>
+			</div>
+			<div class="w3-col">
+				<div class="w3-col m3 w3-right-align">
+					<h4>비밀번호 : </h4>
+				</div>
+				<div class="w3-col m7 w3-center pdl10">
+					<h4 id="txt2"></h4>
+				</div>
+			</div>
+		</div>
+	</div>
+<script type="text/javascript">
+/* 
+	1.	입력 내용을 입력하고 btn1버튼을 클릭하면 입력된 내용을 txt1, txt2에 입력하고 보여주는 기능
+	
+	2.	btn2 버튼이 클릭되면 입력내용과 아래 txt1, txt2 태그의 모든 내용을 지워주는 기능
+	
+	3.	btn3 버튼이 클릭이 되면 아이디 입력태그에 아이디를 'chopa' 그리고 비밀번호는 '12345'
+*/
+/* 
+	document.getElementById('btn1').onclick = function(){
+		var sid = document.getElementById('id').value;
+		var spw = document.getElementById('pw').value;
+		document.getElementById('txt1').innerHTML = sid
+		document.getElementById('txt2').innerHTML = spw
+		document.getElementById('fr').style.display = 'block';
+	}
+	
+	document.getElementById('btn2').onclick = function(){
+		document.getElementById('id').value = '';
+		document.getElementById('pw').value = '';
+		document.getElementById('txt1').innerHTML = '';
+		document.getElementById('txt2').innerHTML = '';
+		document.getElementById('fr').style.display = 'none';
+	}
+	 */
+	 
+	 document.getElementById('btn2').onclick = function(){
+		 var sid = document.getElementById('id').value;
+		 if(!sid){//id 입력 안되있으면
+			 document.getElementById('id').focus();
+			 return;
+		 }
+		 var spw = document.getElementById('pw').value;
+		 if(!spw){//pw 입력이 안되있으면
+			 document.getElementById('pw').focus();
+			 return;
+		 }
+		 document.getElementById('frm').submit();
+	 }
+	 
+	 
+	document.getElementById('btn3').onclick = function(){
+		document.getElementById('id').value = 'chopa'
+		document.getElementById('pw').value = '12345'
+	}
+</script>
+</body>
+</html>

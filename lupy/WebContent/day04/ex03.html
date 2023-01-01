@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../css/chopa.css">
+<style type="text/css">
+
+</style>
+</head>
+<body>
+
+<script type="text/javascript">
+	var str = prompt('5자리 정수 입력: ');
+	var nums = []; //한자리 숫자 다섯개 기억할 배열
+	for(var i = 0 ; i < str.length ; i++ ){
+		//입력받은 문자열 숫자의 길이만큼 반복
+		//하나씩 꺼내서 숫자로 바꾸고
+		var sno = str[i]; //한자리 숫자형태 문자열
+		var no = parseInt(sno);
+		//배열을 채워준다.
+		nums[i] = no;
+	}
+	
+	var sum = 0; //각 자리 숫자 합 기억할 변수
+	for(var i = 0 ; i < nums.length ; i ++ ){
+		sum += nums[i]; // 배열에서 하나씩 꺼내서 누적해서 더해준다.
+	}
+	
+	document.write('입력 받은 숫자 : ' + str + '<br>');
+	document.write('각 자리 다섯 숫자 합계 : ' + sum + '<br>');
+</script>
+</body>
+</html>

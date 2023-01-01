@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>focus</title>
+<link rel="stylesheet" type="text/css" href="../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../css/chopa.css">
+<style type="text/css">
+	#pwmsg {
+		display: none;
+		}
+</style>
+</head>
+<body>
+	<div class="w3-content mxw600">
+		<h1 class="w3-light-green w3-padding w3-center w3-card-4">focus event</h1>
+		<div class="w3-col w3-margin-top w3-card-4">
+			<div class="w3-col w3-margin">
+				<label for="id" class="w3-col m3 w3-right-align label1 w3-text-grey">아 이 디 : </label>
+				<div class="w3-col m8 pdl10">
+					<input type="text" name="id" id="id" class="w3-input w3-border" placeholder="아이디 입력!">
+				</div>
+			</div>
+			<div class="w3-col w3-margin">
+				<label for="id" class="w3-col m3 w3-right-align label1 w3-text-grey">비밀번호 : </label>
+				<div class="w3-col m8 pdl10">
+					<input type="password" name="pw" id="pw" class="w3-input w3-border" placeholder="비밀번호 입력!">
+					<p class="w3-center" id="pwmsg"></p>
+				</div>
+			</div>
+		
+			
+			
+			
+			
+			<div class="w3-col w3-margin">
+				<label for="subj" class="w3-col m3 w3-right-align label1 w3-text-grey">과목 : </label>
+				<div class="w3-col m8 pdl10">
+				<!--<input type="text" name="subj" class="w3-input w3-border" placeholder="과목 입력!">
+					<input type="text" name="subj" class="w3-input w3-border" placeholder="과목 입력!">
+					<input type="text" name="subj" class="w3-input w3-border" placeholder="과목 입력!">
+					<input type="text" name="subj" class="w3-input w3-border" placeholder="과목 입력!">
+					<input type="text" name="subj" class="w3-input w3-border" placeholder="과목 입력!">
+					<input type="text" name="subj" class="w3-input w3-border" placeholder="과목 입력!">
+					<input type="text" name="subj" class="w3-input w3-border" placeholder="과목 입력!">
+					<input type="text" name="subj" class="w3-input w3-border" placeholder="과목 입력!">-->
+					<!--	subj=java&subj=db&subj=html&subj=jsp&...
+							subj = [java, db, hthml, jsp, ...]
+					 -->
+				</div>
+			</div>
+			<div class="w3-col w3-margin">
+				<label for="file" class="w3-col m3 w3-right-align label1 w3-text-grey">첨부파일 : </label>
+				<div class="w3-col m8 pdl10">
+					<input type="file" name="file" id="file" class="w3-input w3-border" placeholder="파일 선택!">
+				</div>
+			</div>		
+		</div>
+	</div>
+<script type="text/javascript" src="../js/jquery-3.6.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+//		$('#id').focus(function(){
+//			console.log('### 입력 시작 ...!');
+//		});
+		$('#id').focusin(function(){
+			console.log('### 입력 시작 ...!');
+			$(this).css('background-color', 'blue');
+		});
+		$('#id').focusout(function(){
+			console.log('### 입력 종료 ...!');
+			$(this).css('background-color', 'red');
+		});
+		$('#file').focusout(function(evt){
+			var sfile = $(this).val();
+			alert(sfile);
+		});
+		$('#id1').blur(function(){
+			$(this).blur();
+		});
+		$('#pw').keyup(function(){
+			var skey = $(this).val();
+			console.log('skey : ' + skey);
+			$('#pwmsg').stop().fadeOut(500, function(){
+				
+			if(skey == '12345'){
+				$('#pwmsg').html('*정확한 비밀번호 입니다*')
+				$('#pwmsg').removeClass('w3-text-red').addClass('w3-text-green');
+				
+			}else{
+				$('#pwmsg').html('*부정확한 비밀번호 입니다*')
+				$('#pwmsg').removeClass('w3-text-red').addClass('w3-text-red');
+			}
+				$('#pwmsg').fadeToggle(1000);
+			});
+		});
+		$('#content').scroll(function(){
+			console.log('********이동중***********')
+		})
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../css/chopa.css">
+<style type="text/css">
+
+</style>
+</head>
+<body>
+
+<script type="text/javascript">
+/* 
+	var nums = [];
+	for( i = 0 ; i < 10 ; i++){
+		nums = parseInt(nums + 1);
+		document.write(nums);
+	}
+ */
+	var nums = [];
+	var no = 1;
+	while(nums.length < 10){
+		nums.push(no++);
+	}
+	document.write('<h3 class="w3-center"> nums : ' + nums + '</h3>');
+	nums.length = 0;
+	
+	for( i = 0 ; i < 10 ; i++){
+		nums.unshift(10 - i);
+	}
+	
+	var sum = 0;
+	for(var i = 0 ; i < nums.length ; i++ ){
+		sum = sum + nums[i];
+	}
+	document.write('<h3 class="w3-center"> sum : ' + sum + '</h3>');
+	
+	var total = 0;
+	nums.forEach(function(item){
+		total = total + item;
+	});
+	document.write('<h3 class="w3-center"> total : ' + total + '</h3>');
+</script>
+</body>
+</html>

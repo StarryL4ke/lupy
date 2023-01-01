@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<title>Insert title here</title>
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+	<h1 style="text-align: center;">입력된 정수 : <span id="in"></span></h1>
+	<h1 style="text-align: center;">결과 : <span id="result"></span></h1>
+
+<script type="text/javascript">
+	var sno = prompt('정수 입력 : ');
+	var no = parseInt(sno)
+	
+	/* 							true	false */
+	var result = (no % 2 == 0)? '짝수' : '홀수' ;
+	
+	document.getElementById('in').innerHTML = no;
+	document.getElementById('result').innerHTML = result;
+	
+</script>
+</body>
+</html>

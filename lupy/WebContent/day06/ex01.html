@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../css/chopa.css">
+<script type="text/javascript" src="../js/w3color.js"></script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+
+<script type="text/javascript">
+
+/* 
+	1.	다섯 학생의 국어, 영어, 수학 점수를 기억할 배열을 만들고 점수를 60 ~ 100 사이로 랜덤하게 만들어서 채워넣으세요.
+	
+	2.	각 학생들의 총점을 계산해서 출력하세요.
+	
+	3. 총점까지 기억하는 배열을 만들고 총점이 높은 학생부터 정렬해서 결과를 출력하세요.
+	
+	A B C D E
+	
+*/
+	var student = ['A', 'B', 'C' ,'D', 'E'];
+	var subj = ['국어', '영어', '수학', '총점'];
+	var score = [];//[]大배열 생성
+	for(i = 0 ; i < 5 ; i++){//中배열 5칸 생성
+		score[i] = [];//中배열 안에 배열 생성
+		for(var j = 0 ; j < 3 ; j++){//小배열 3칸 생성
+			var no = parseInt(Math.random() * 41) + 60;//랜덤한 점수 생성
+			score[i][j] = no;//i번째 학생의 j번쨰 과목 점수 입력
+		}
+	}
+	
+	for(var i = 0 ; i < score.length ; i++){
+		//총점변수
+		var sum = 0;
+		for(var j = 0 ; j < score[i].length ; j++){//小배열 3번 만큼 반복
+			sum = sum + score[i][j]
+		}
+//		document.write('<h3>' + (i+1)+ '번째 학생 총점 :' + sum + '</h3>')
+	}
+//1.//
+/* 
+	var stud = [];
+	for(var i = 0 ; i < score.length ; i++){
+		stud[i] = [];
+		for(var j = 0 ; j < score[i].length ; j++){
+			stud[i][j]  = score[i][j]
+		}
+		stud[i][3] = 0;
+		var sum = 0;
+		for(var j = 0 ; j < score[i].length ; j++){
+			sum = sum + score[i][j];
+		}
+		stud[i][3] = sum;
+	}
+alert(stud);
+*/
+//2.//
+ 	var stud = [];
+	for(var i = 0 ; i < score.length ; i++){
+		stud[i] = [];
+		stud[i][3] = 0;
+		for(var j = 0 ; j < score[i].length ; j++){
+			stud[i][j]  = score[i][j]
+			stud[i][3] = stud[i][3] + score[i][j];
+		}
+	}
+//alert(stud);
+	
+	function printArr(arr){
+		document.write('<div class="w3-content mxw550">');//masterdiv
+			document.write('<h1 class="w3-green w3-padding w3-center w3-card-4">학생 평가 점수</h1>');//타이틀
+			document.write('<div class="w3-col w3-margin-top">');//div1
+				for(var i = 0 ; i < arr.length ; i++){
+					document.write('<div class="w3-col w3-margin-top w3-padding w3-card-4">');//div2
+						document.write('<h2 class="w3-col ' + colorList[i] + 'w3-center">' + student[i] + '</h2>')//학생이름
+						document.write('<div class="w3-col">');
+						for(var j = 0 ; j < arr[i].length ; j++){
+							document.write('<div class="w3-col w3-padding">');
+								document.write('<h4 class="w3-col m4 w3-right-align">' + subj[j] + ' : </h4>');
+								document.write('<h4 class="w3-col m6 w3-center">' + arr[i][j] + '</h4>');
+							document.write('</div>');
+					}
+						document.write('</div>');
+					document.write('</div>');//div2
+				}
+			document.write('</div>');//div1
+		document.write('</div>');//masterdiv
+	}
+
+	
+//선택정렬
+/* 
+	for(var i = 0 ; i < stud.length -1 ; i++){
+		for(var j = i + 1 ; j < stud.length ; j++){
+			var alpha = stud[i][3];
+			var beta = stud[j][3];
+			if(alpha > beta){
+				var tmp = stud[i];
+				stud[i] = stud[j];
+				stud[j] = tmp;
+			}
+		}
+	} */
+	
+//	stud.sort(function(a,b){
+		/* 
+			매개변수로 선언된 a, b는 stud배열에 입력되어있는 배열을 의미함.
+			a: 원본
+			b: 비교대상
+			
+			이 함수에서는 반환값이 음수이면 a와 b의 위치를 바꾸지 않고 양수일 경우 두개의 배열에서의 위치를 바꾼다.
+			이때 반환값 숫자의 크지는 중요하지 않다.
+		*/
+/* 		
+
+		var alpha = a[3];
+		var beta = b[3];
+
+		return (alpha > beta) ? 1 : -1
+		return alpha - beta;
+*/
+//		return a[3] - b[3];
+//	})
+	
+	stud.sort(function(a,b){
+		return b[1] - a[1];
+	})
+	printArr(stud);
+	
+	var korean = [];//각 학생별 국어 점수 배열
+	for(var i = 0 ; i < 5 ; i++){
+		for(var j = 0 ; j < stud[i].length ; j++){
+			korean[i] = stud[i][0];
+			
+		}
+	}
+	
+	var english = [];//각 학생별 영어 점수 배열
+	for(var i = 0 ; i < 5 ; i++){
+		for(var j = 0 ; j < stud[i].length ; j++){
+			english[i] = stud[i][1];
+			
+		}
+	}
+	
+	var mathematics = [];//각 학생별 수학 점수 배열
+	for(var i = 0 ; i < 5 ; i++){
+		for(var j = 0 ; j < stud[i].length ; j++){
+			mathematics[i] = stud[i][2];
+			
+		}
+	}
+	
+	var total = [];//각 학생별 합산 점수 배열
+	for(var i = 0 ; i < 5 ; i++){
+		for(var j = 0 ; j < stud[i].length ; j++){
+			total[i] = stud[i][3];
+			
+		}
+	}
+	
+/* 	var group = [];
+	for(var i = 0 ; i < 5 ; i++){
+		group[i] = [];
+		for(var j = 0 ; j < 4 ; j++){
+			for(var k = 0 ; k < stud[i].length ; k++){//국어
+				group[i][0] = stud[i][0];
+			}
+			for(var p = 0 ; p < stud[i].length ; p++){//영어
+				group[i][1] = stud[i][1];
+			}
+			for(var q = 0 ; q < stud[i].length ; q++){//수학
+				group[i][2] = stud[i][2];
+			}
+			for(var t = 0 ; t < stud[i].length ; t++){//총합
+				group[i][3] = stud[i][3];
+			}
+		}
+	}
+	document.write('<h3>' + group + '</h3>'); */
+	 
+	
+	 var group = [];
+	 for(var i = 0 ; i < 4 ; i++){//ARRAY: 국어, 영어, 수학, 합계
+		 group[i] = [];
+	 	for(var j = 0 ; j < 5 ; j++){//ARRAY: 각 과목당 학생 배열 배정
+	 		for(var k = 0 ; k < stud.length ; k++){
+	 			group[i][j] = stud[i][j]
+	 		}
+	 	}
+	 }
+	 document.write('<h3>' + stud + '</h3>');
+	 
+
+	
+	var group = [];
+	var data = group.concat(korean, english, mathematics, total);
+
+
+/* 	document.write(korean + '<br>');
+	document.write(english + '<br>');
+	document.write(mathematics + '<br>');
+	document.write(total + '<br>'); */
+/* 	document.write('<h3 style="w3-text-orange">concat 처리: ' + data + '</h3>'); */
+	
+	
+	
+</script>
+</body>
+</html>

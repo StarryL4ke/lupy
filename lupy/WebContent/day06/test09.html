@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../css/w3.css">
+<link rel="stylesheet" type="text/css" href="../css/chopa.css">
+<style type="text/css">
+
+</style>
+</head>
+<body>
+
+<script type="text/javascript">
+//배열에 두개 이상의 데이터를 결합하거나 다른 배열을 결합하는 함수
+	var city01 = ['seoul', 'daegu', 'deageon'];
+	var city02 = ['busan', 'gwangju', 'incheon'];
+	var city03 = ['junju', 'buyeo', 'sejong'];
+	
+	var data01 = city01.concat('suwon');
+	document.write(city01 + '<br>')
+	document.write(data01 + '<br>')
+	var data02 = city01.concat(city02);
+	document.write(data02 + '<br>')
+	var data03 = city01.concat(city03 , city02);
+	document.write(data03 + '<br>')
+	
+	alert(Array.isArray(data03) ? '배열' : '배열아님')
+	
+	var data04 = city01;
+	data04[3] = city02;
+	data04[4] = city03;
+	
+	document.write(data04 + '<br>');
+	
+	alert(typeof data04[3]);
+	alert(data04.length);
+	
+	var data = data04[3][1];
+	alert(data);
+	
+	// data04에서 도시 이름 하니씩 꺼내기
+	for(var i = 0 ; i < data04.length ; i++ ){
+		var city = data04[i];
+		if(Array.isArray(city)){
+			for(var j = 0 ; j < city.length ; j++ ){
+				document.write('<h3>');
+				document.write(city[j]);
+				document.write('</h3>');				
+			}
+		} else {
+		document.write('<h3>');
+		document.write(city);
+		document.write('');
+		}
+	}
+</script>
+</body>
+</html>
